@@ -1,4 +1,5 @@
 # laravel_enviroment
+Laravelのサンプル環境
 
 ## 開発環境
 - PHP 8.0
@@ -33,7 +34,7 @@ $ php artisan migrate
 $ exit 
 ```
 
-#### http://127.0.0.1:10080/  へ接続する。
+#### http://127.0.0.1:8080/  へ接続する。
 
 
 #### ※MySQLに接続したい時
