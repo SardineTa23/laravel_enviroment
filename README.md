@@ -2,31 +2,34 @@
 Laravelのサンプル環境
 
 ## 開発環境
-- PHP 8.0
-- Laravel Framework 8.41.0
-- niginx 1.18.0
+- PHP ^8.0
+- Laravel Framework v9.8.1
+- Nginx 1.18.0
 - MySQL 8.0.25
 - docker
 - docker-compose 3.8
 
 
-## get started
+## Get Started
 
 
-#### クローンする
+#### ローカル環境へクローンする。
 ```
+$ cd <enviroment directory>
 $ git clone https://github.com/k-iwashita-prtimes/laravel_enviroment.git
 ```
 
-#### cloneしたディレクト配下へcdした後、dockerをbuild, upする。
+#### dockerをbuild, upする。
 ```
-$ docker compose build --no-cache
+$ cd laravel_enviroment
+$ docker compose build
 $ docker compose up -d 
 ```
 
-#### dockerコンテナの中で、必要なファイルの生成, migrationを行う
+#### dockerコンテナの中で必要なセットアップを行う.
 ```
 $ docker compose exec app bash
+// コンテナの中
 $ composer install
 $ cp .env.example .env
 $ php artisan key:generate
@@ -34,9 +37,13 @@ $ php artisan migrate
 $ exit 
 ```
 
-#### http://127.0.0.1:8080/  へ接続する。
+#### http://127.0.0.1:8080/ へ接続する。
 
 
 #### ※MySQLに接続したい時
 ```
 $ docker-compose exec db bash -c 'mysql -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE}'
+```
+
+### 更新
+[ ---2022-04-16---] Laravelのバージョンを9系へアップデート
