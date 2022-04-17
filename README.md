@@ -4,9 +4,9 @@ Laravelのサンプル環境
 ## 開発環境
 - PHP ^8.0
 - Laravel Framework v9.8.1
-- Nginx 1.18.0
-- MySQL 8.0.25
-- docker
+- Nginx ^1.18
+- MySQL ^8.0
+- Docker
 - docker-compose 3.8
 
 
